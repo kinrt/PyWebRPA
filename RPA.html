@@ -1,0 +1,323 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-cn" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-cn" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. RPA module &mdash; pyWebRPA 0.1.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="static/documentation_options.js"></script>
+        <script type="text/javascript" src="static/jquery.js"></script>
+        <script type="text/javascript" src="static/underscore.js"></script>
+        <script type="text/javascript" src="static/doctools.js"></script>
+        <script type="text/javascript" src="static/language_data.js"></script>
+        <script type="text/javascript" src="static/translations.js"></script>
+    
+    <script type="text/javascript" src="static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="2. browser module" href="browser.html" />
+    <link rel="prev" title="Welcome to pyWebRPA’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pyWebRPA
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. RPA module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="browser.html">2. browser module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="table.html">3. table module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parameter.html">4. parameter module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command.html">5. command module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="log.html">6. log module</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pyWebRPA</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>1. RPA module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-RPA">
+<span id="rpa-module"></span><h1>1. RPA module<a class="headerlink" href="#module-RPA" title="永久链接至标题">¶</a></h1>
+<dl class="class">
+<dt id="RPA.RPA">
+<em class="property">class </em><code class="sig-prename descclassname">RPA.</code><code class="sig-name descname">RPA</code><span class="sig-paren">(</span><em class="sig-param">parent</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.RPA" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="simple">
+<dt>RPA包含以下模块：</dt><dd><p>RPA.log = Log(self, basicData)；
+RPA.parameter = Parameter(self,parameterList)；
+RPA.command = Command(self,commandList)；
+RPA.table = Table(self,viewList)；
+RPA.browser = Browser(self, controlDict)</p>
+</dd>
+<dt>已导入以下库：</dt><dd><p>json，os，sys，time，pandas as pd</p>
+</dd>
+</dl>
+<p>其他库可以自行在脚本中导入，要注意库文件路径是否可以访问到。</p>
+<dl class="attribute">
+<dt id="RPA.RPA.basicData">
+<code class="sig-name descname">basicData</code><em class="property"> = {'abstract': '使用RPA运行python脚本，内置部分浏览器操作方法。方便自动化的操作浏览器，获取数据，自动化web操作流程。', 'auth': 'kinrt', 'contact': {'Email': 'tjybrentao&#64;163.com', 'QQ': '351920359'}, 'date': '2019/11/07', 'logLevel': 20, 'regNum': 'RPA00001', 'title': 'PyWebRPA', 'tryCount': 0, 'version': '0.2.0', 'webSite': 'http://kinrt.top:8081'}</em><a class="headerlink" href="#RPA.RPA.basicData" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="RPA.RPA.config">
+<code class="sig-name descname">config</code><span class="sig-paren">(</span><em class="sig-param">parameterList=[]</em>, <em class="sig-param">commandList=[]</em>, <em class="sig-param">viewList=[]</em>, <em class="sig-param">controlDict={}</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.RPA.config" title="永久链接至目标">¶</a></dt>
+<dd><p>获取用户配置，初始化各个部件参数。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>parameterList</strong> (<em>list</em>) – <p>参数列表，参考：[
+{“name”: “名称”, “help”: “选择目录”, “type”: “文本框”, “value”: “qwerty”},
+{“name”: “大小”, “help”: “设置数值大小”, “type”: “数字框”},
+{“name”: “选择”, “help”: “选择一个值”, “type”: “下拉框”,</p>
+<blockquote>
+<div><p>”value”: [“abc”, “def”, “123”, “456”]},</p>
+</div></blockquote>
+<p>{“name”: “日期”, “help”: “选择目录”, “type”: “日期框”, “value”: “”},
+{“name”: “时间”, “help”: “选择目录”, “type”: “时间框”, “value”: “”},
+{“name”: “日期时间”, “help”: “选择目录”, “type”: “日期时间框”, “value”: “”},
+{“name”: “文件夹”, “help”: “选择目录”, “type”: “文件夹框”, “value”: “”},
+{“name”: “文件”, “help”: “选择目录”, “type”: “文件框”, “value”: “”}]</p>
+</p></li>
+<li><p><strong>commandList</strong> (<em>list</em>) – 命令按钮列表，参考：[
+{“text”: “网页操作”, “help”: “点击开始运行”, “command”: test1},
+{“text”: “表格操作”, “help”: “点击查看效果”, “command”: test2},
+{“text”: “日志操作”, “help”: “点击查看效果”, “command”: test3},
+{“text”: “参数操作”, “help”: “点击查看效果”, “command”: test4},]</p></li>
+<li><p><strong>viewList</strong> (<em>list</em>) – 表格视图列表，参考：[
+{“head”: “a”, “width”: 70, “anchor”: “n”},
+{“head”: “b”, “width”: 200, “anchor”: “n”},
+{“head”: “c”, “width”: 70, “anchor”: “center”},
+{“head”: “d”, “width”: 70, “anchor”: “center”},
+{“head”: “e”, “width”: 150, “anchor”: “n”}]</p></li>
+<li><p><strong>controlDict</strong> (<em>dict</em>) – 浏览器控件列表，参考：controlDict = {}
+controlDict[“搜索框”] = “#q”
+controlDict[“搜索按钮”] = “button.btn-search.tb-bg”
+controlDict[“宝贝”] = “div#mainsrp-itemlist div.item.J_MouserOnverReq”
+controlDict[“宝贝标题”] = “div#mainsrp-itemlist div.item.J_MouserOnverReq img.J_ItemPic.img”</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="RPA.RPA.getDateTime">
+<code class="sig-name descname">getDateTime</code><span class="sig-paren">(</span><em class="sig-param">format='%Y-%m-%d %H:%M:%S'</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.RPA.getDateTime" title="永久链接至目标">¶</a></dt>
+<dd><p>获取当前时间</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>format</strong> (<em>str</em>) – 返回时间的各式</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>获取的时间字符串</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="RPA.RPA.runScript">
+<code class="sig-name descname">runScript</code><span class="sig-paren">(</span><em class="sig-param">scriptFile=False</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.RPA.runScript" title="永久链接至目标">¶</a></dt>
+<dd><p>加载并运行一个脚本。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>scriptFile</strong> (<em>bool</em><em>,</em><em>str</em>) – 如果为False，将弹窗提示选择脚本，否则将做为脚本文件名加载运行。</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="RPA.RPA.sleep">
+<code class="sig-name descname">sleep</code><span class="sig-paren">(</span><em class="sig-param">timeOut=0.001</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.RPA.sleep" title="永久链接至目标">¶</a></dt>
+<dd><p>延时等待，并不阻塞线程</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>timeOut</strong> (<em>float</em>) – 延时的时间，单位是秒</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="RPA.RPA.status">
+<code class="sig-name descname">status</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RPA.RPA.status" title="永久链接至目标">¶</a></dt>
+<dd><p>确定程序状态是否可以继续运行</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>返回是否可以运行</p>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="browser.html" class="btn btn-neutral float-right" title="2. browser module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to pyWebRPA’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, kinrt
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

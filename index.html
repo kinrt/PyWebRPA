@@ -1,0 +1,518 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-cn" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-cn" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Welcome to pyWebRPA’s documentation! &mdash; pyWebRPA 0.1.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="static/documentation_options.js"></script>
+        <script type="text/javascript" src="static/jquery.js"></script>
+        <script type="text/javascript" src="static/underscore.js"></script>
+        <script type="text/javascript" src="static/doctools.js"></script>
+        <script type="text/javascript" src="static/language_data.js"></script>
+        <script type="text/javascript" src="static/translations.js"></script>
+    
+    <script type="text/javascript" src="static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="1. RPA module" href="RPA.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> pyWebRPA
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="RPA.html">1. RPA module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="browser.html">2. browser module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="table.html">3. table module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parameter.html">4. parameter module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command.html">5. command module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="log.html">6. log module</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">pyWebRPA</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>Welcome to pyWebRPA’s documentation!</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="welcome-to-pywebrpa-s-documentation">
+<h1>Welcome to pyWebRPA’s documentation!<a class="headerlink" href="#welcome-to-pywebrpa-s-documentation" title="永久链接至标题">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="RPA.html">1. RPA module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="browser.html">2. browser module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="table.html">3. table module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parameter.html">4. parameter module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command.html">5. command module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="log.html">6. log module</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="api">
+<h1>API<a class="headerlink" href="#api" title="永久链接至标题">¶</a></h1>
+<dl class="function">
+<dt id="RPA.RPA">
+<code class="sig-prename descclassname">RPA.</code><code class="sig-name descname">RPA</code><span class="sig-paren">(</span><em class="sig-param">parent</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.RPA" title="永久链接至目标">¶</a></dt>
+<dd><dl class="simple">
+<dt>RPA包含以下模块：</dt><dd><p>RPA.log = Log(self, basicData)；
+RPA.parameter = Parameter(self,parameterList)；
+RPA.command = Command(self,commandList)；
+RPA.table = Table(self,viewList)；
+RPA.browser = Browser(self, controlDict)</p>
+</dd>
+<dt>已导入以下库：</dt><dd><p>json，os，sys，time，pandas as pd</p>
+</dd>
+</dl>
+<p>其他库可以自行在脚本中导入，要注意库文件路径是否可以访问到。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="RPA.RPA.config">
+<code class="sig-prename descclassname">RPA.RPA.</code><code class="sig-name descname">config</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">parameterList=[]</em>, <em class="sig-param">commandList=[]</em>, <em class="sig-param">viewList=[]</em>, <em class="sig-param">controlDict={}</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.RPA.config" title="永久链接至目标">¶</a></dt>
+<dd><p>获取用户配置，初始化各个部件参数。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>parameterList</strong> (<em>list</em>) – <p>参数列表，参考：[
+{“name”: “名称”, “help”: “选择目录”, “type”: “文本框”, “value”: “qwerty”},
+{“name”: “大小”, “help”: “设置数值大小”, “type”: “数字框”},
+{“name”: “选择”, “help”: “选择一个值”, “type”: “下拉框”,</p>
+<blockquote>
+<div><p>”value”: [“abc”, “def”, “123”, “456”]},</p>
+</div></blockquote>
+<p>{“name”: “日期”, “help”: “选择目录”, “type”: “日期框”, “value”: “”},
+{“name”: “时间”, “help”: “选择目录”, “type”: “时间框”, “value”: “”},
+{“name”: “日期时间”, “help”: “选择目录”, “type”: “日期时间框”, “value”: “”},
+{“name”: “文件夹”, “help”: “选择目录”, “type”: “文件夹框”, “value”: “”},
+{“name”: “文件”, “help”: “选择目录”, “type”: “文件框”, “value”: “”}]</p>
+</p></li>
+<li><p><strong>commandList</strong> (<em>list</em>) – 命令按钮列表，参考：[
+{“text”: “网页操作”, “help”: “点击开始运行”, “command”: test1},
+{“text”: “表格操作”, “help”: “点击查看效果”, “command”: test2},
+{“text”: “日志操作”, “help”: “点击查看效果”, “command”: test3},
+{“text”: “参数操作”, “help”: “点击查看效果”, “command”: test4},]</p></li>
+<li><p><strong>viewList</strong> (<em>list</em>) – 表格视图列表，参考：[
+{“head”: “a”, “width”: 70, “anchor”: “n”},
+{“head”: “b”, “width”: 200, “anchor”: “n”},
+{“head”: “c”, “width”: 70, “anchor”: “center”},
+{“head”: “d”, “width”: 70, “anchor”: “center”},
+{“head”: “e”, “width”: 150, “anchor”: “n”}]</p></li>
+<li><p><strong>controlDict</strong> (<em>dict</em>) – 浏览器控件列表，参考：controlDict = {}
+controlDict[“搜索框”] = “#q”
+controlDict[“搜索按钮”] = “button.btn-search.tb-bg”
+controlDict[“宝贝”] = “div#mainsrp-itemlist div.item.J_MouserOnverReq”
+controlDict[“宝贝标题”] = “div#mainsrp-itemlist div.item.J_MouserOnverReq img.J_ItemPic.img”</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="RPA.Log.print">
+<code class="sig-prename descclassname">RPA.Log.</code><code class="sig-name descname">print</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">logStr</em>, <em class="sig-param">level=20</em>, <em class="sig-param">popup=False</em>, <em class="sig-param">buttons=1</em>, <em class="sig-param">modal=True</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Log.print" title="永久链接至目标">¶</a></dt>
+<dd><p>打印日志在日志窗口，并控制父级状态栏显示，同时写入到日志文件。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;测试输出内容&quot;</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="kc">True</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>logStr</strong> (<em>str</em>) – 需要打印的内容。</p></li>
+<li><p><strong>level</strong> (<em>int</em>) – 打印日志的等级：CRITICAL = 50,ERROR = 40,WARN = 30,INFO = 20,DEBUG = 10,NOTSET = 0</p></li>
+<li><p><strong>popup（bool）</strong> – 是否弹窗显示。</p></li>
+<li><p><strong>buttons（bool）</strong> – 弹出窗口的按钮数量，还可以是2，弹出窗口显示yes或no，返回bool值。</p></li>
+<li><p><strong>modal（bool）</strong> – 是否模态显示窗口。</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>返回是否执行成功，有弹窗返回选择结果。</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="RPA.Parameter.setParam">
+<code class="sig-prename descclassname">RPA.Parameter.</code><code class="sig-name descname">setParam</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">param</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Parameter.setParam" title="永久链接至目标">¶</a></dt>
+<dd><p>设置参数栏参数的值。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>param</strong> (<em>str</em><em>,</em><em>int</em>) – 参数名称，或者索引。</p></li>
+<li><p><strong>value</strong> (<em>str</em>) – 需要设置的参数值。</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="RPA.Parameter.getParam">
+<code class="sig-prename descclassname">RPA.Parameter.</code><code class="sig-name descname">getParam</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">param</em>, <em class="sig-param">value='value'</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Parameter.getParam" title="永久链接至目标">¶</a></dt>
+<dd><p>获取参数栏设置的参数。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>param</strong> (<em>str</em><em>,</em><em>int</em>) – 参数名称，或者索引。</p></li>
+<li><p><strong>value</strong> (<em>str</em>) – 需要获取的参数值，可以是value，name，help，type。</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>返回获取到的值。</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>str,float,bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="RPA.Browser.browser">
+<code class="sig-prename descclassname">RPA.Browser.</code><code class="sig-name descname">browser</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">oper</em>, <em class="sig-param">value=''</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Browser.browser" title="永久链接至目标">¶</a></dt>
+<dd><p>使用浏览器自动化执行一些操作</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">browser</span><span class="p">(</span><span class="s2">&quot;打开网址&quot;</span><span class="p">,</span> <span class="s2">&quot;https://www.baidu.com/&quot;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">browser</span><span class="p">(</span><span class="s2">&quot;截图&quot;</span><span class="p">,</span> <span class="s2">&quot;c:</span><span class="se">\t</span><span class="s2">est.jpg&quot;</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>oper</strong> (<em>str</em>) – 操作方法：[“打开网址”, “刷新”, “上一页”, “下一页”, “获取网址”, “获取标题”, “获取代码”, “执行JS”, “下拉加载”, “弹窗自动同意”, “弹窗自动拒绝”, “伪装浏览器”, “设置代理”, “截图”, “另存为PDF”, “下载”]</p></li>
+<li><p><strong>value</strong> (<em>str</em>) – 一些操作需要传入的参数，如打开网址的网址。</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>返回是否执行成功，或者执行后获取的值。</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>bool, str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="RPA.Browser.browserExp">
+<code class="sig-prename descclassname">RPA.Browser.</code><code class="sig-name descname">browserExp</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">oper</em>, <em class="sig-param">control={}</em>, <em class="sig-param">contIndex=''</em>, <em class="sig-param">value=''</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Browser.browserExp" title="永久链接至目标">¶</a></dt>
+<dd><p>使用浏览器，操作控件，执行一些操作。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">browserExp</span><span class="p">(</span><span class="s2">&quot;输入&quot;</span><span class="p">,</span> <span class="s2">&quot;#q&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;测试输入&quot;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">browserExp</span><span class="p">(</span><span class="s2">&quot;点击&quot;</span><span class="p">,</span> <span class="s2">&quot;搜索按钮&quot;</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>oper</strong> (<em>str</em>) – 需要执行的操作：[“点击”, “模拟点击”, “获取值”, “获取代码”, “获取属性”, “输入”, “模拟输入”, “上传文件”, “计数”, “右击”, “获取标签”, “获取坐标”, “获取尺寸”, “截图”, “下拉加载”, “是否显示”, “等待加载”]</p></li>
+<li><p><strong>control</strong> (<em>str</em>) – 可以是提前设置好的控件名称，也可以直接是一个css选择器字符串。</p></li>
+<li><p><strong>contIndex（int）</strong> – css选择器选择一组控件时，需要指定操作的控件索引。</p></li>
+<li><p><strong>value（str）</strong> – 一些操作需要传入的参数，如输入。</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>返回是否执行成功，或者执行后获取的值。</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>bool, str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="RPA.Table.importData">
+<code class="sig-prename descclassname">RPA.Table.</code><code class="sig-name descname">importData</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">fileName=False</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Table.importData" title="永久链接至目标">¶</a></dt>
+<dd><p>导入CSV，xlsx，xls 文件数据到表格，弹窗选择文件。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>fileName</strong> (<em>bool</em><em>,</em><em>str</em>) – 如果没有传入文件名参数，将弹出选择文件的窗口。</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>返回是否执行成功</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="RPA.Table.exportData">
+<code class="sig-prename descclassname">RPA.Table.</code><code class="sig-name descname">exportData</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">fileName=False</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Table.exportData" title="永久链接至目标">¶</a></dt>
+<dd><p>导出表格数据到CSV，xlsx，xls 文件，弹窗选择文件。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>fileName</strong> (<em>bool</em><em>,</em><em>str</em>) – 如果没有传入文件名参数，将弹出选择文件的窗口。</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>返回是否执行成功</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="RPA.Table.addRow">
+<code class="sig-prename descclassname">RPA.Table.</code><code class="sig-name descname">addRow</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">data=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Table.addRow" title="永久链接至目标">¶</a></dt>
+<dd><p>向表格添加一行数据。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>list</em><em>,</em><em>dict</em>) – 向表格添加的数据，可以是列表或者字典。</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>返回表格行数</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="RPA.Table.insertRow">
+<code class="sig-prename descclassname">RPA.Table.</code><code class="sig-name descname">insertRow</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">data=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Table.insertRow" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="RPA.Table.deleteRows">
+<code class="sig-prename descclassname">RPA.Table.</code><code class="sig-name descname">deleteRows</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">rows=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Table.deleteRows" title="永久链接至目标">¶</a></dt>
+<dd><p>删除表格中的行。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>rows</strong> (<em>list</em>) – 要删除的行索引列表，如果为空，删除选中的行。</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>返回表格行数</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="RPA.Table.clearData">
+<code class="sig-prename descclassname">RPA.Table.</code><code class="sig-name descname">clearData</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Table.clearData" title="永久链接至目标">¶</a></dt>
+<dd><p>清空表格中的数据。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>返回表格行数</p>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="RPA.Table.setData">
+<code class="sig-prename descclassname">RPA.Table.</code><code class="sig-name descname">setData</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">value</em>, <em class="sig-param">row</em>, <em class="sig-param">col</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Table.setData" title="永久链接至目标">¶</a></dt>
+<dd><p>设置表格指定单元数据。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>str</em>) – 要设置的值</p></li>
+<li><p><strong>row</strong> (<em>int</em>) – 要设置单元格的行坐标</p></li>
+<li><p><strong>col（int</strong><strong>,</strong><strong>str</strong><strong>)</strong> – 要设置单元格的列坐标或者列名称</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>返回是否执行成功</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="RPA.Table.getData">
+<code class="sig-prename descclassname">RPA.Table.</code><code class="sig-name descname">getData</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">row</em>, <em class="sig-param">col</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Table.getData" title="永久链接至目标">¶</a></dt>
+<dd><p>获取表格指定单元数据。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>row</strong> (<em>int</em>) – 要获取单元格的行坐标</p></li>
+<li><p><strong>col（int</strong><strong>,</strong><strong>str</strong><strong>)</strong> – 要获取单元格的列坐标或者列名称</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>返回单元格的数值</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="RPA.html" class="btn btn-neutral float-right" title="1. RPA module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, kinrt
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

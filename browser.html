@@ -1,0 +1,620 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-cn" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-cn" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2. browser module &mdash; pyWebRPA 0.1.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="static/documentation_options.js"></script>
+        <script type="text/javascript" src="static/jquery.js"></script>
+        <script type="text/javascript" src="static/underscore.js"></script>
+        <script type="text/javascript" src="static/doctools.js"></script>
+        <script type="text/javascript" src="static/language_data.js"></script>
+        <script type="text/javascript" src="static/translations.js"></script>
+    
+    <script type="text/javascript" src="static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="3. table module" href="table.html" />
+    <link rel="prev" title="1. RPA module" href="RPA.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pyWebRPA
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="RPA.html">1. RPA module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. browser module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="table.html">3. table module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parameter.html">4. parameter module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command.html">5. command module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="log.html">6. log module</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pyWebRPA</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>2. browser module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-browser">
+<span id="browser-module"></span><h1>2. browser module<a class="headerlink" href="#module-browser" title="永久链接至标题">¶</a></h1>
+<dl class="class">
+<dt id="browser.Browser">
+<em class="property">class </em><code class="sig-prename descclassname">browser.</code><code class="sig-name descname">Browser</code><span class="sig-paren">(</span><em class="sig-param">parent</em>, <em class="sig-param">controlDict={}</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.Browser" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></p>
+<dl class="method">
+<dt id="browser.Browser.browser">
+<code class="sig-name descname">browser</code><span class="sig-paren">(</span><em class="sig-param">oper</em>, <em class="sig-param">value=''</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.Browser.browser" title="永久链接至目标">¶</a></dt>
+<dd><p>使用浏览器自动化执行一些操作</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">browser</span><span class="p">(</span><span class="s2">&quot;打开网址&quot;</span><span class="p">,</span> <span class="s2">&quot;https://www.baidu.com/&quot;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">browser</span><span class="p">(</span><span class="s2">&quot;截图&quot;</span><span class="p">,</span> <span class="s2">&quot;c:</span><span class="se">\t</span><span class="s2">est.jpg&quot;</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>oper</strong> (<em>str</em>) – 操作方法：[“打开网址”, “刷新”, “上一页”, “下一页”, “获取网址”, “获取标题”, “获取代码”, “执行JS”, “下拉加载”, “弹窗自动同意”, “弹窗自动拒绝”, “伪装浏览器”, “设置代理”, “截图”, “另存为PDF”, “下载”]</p></li>
+<li><p><strong>value</strong> (<em>str</em>) – 一些操作需要传入的参数，如打开网址的网址。</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>返回是否执行成功，或者执行后获取的值。</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>bool, str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="browser.Browser.browserExp">
+<code class="sig-name descname">browserExp</code><span class="sig-paren">(</span><em class="sig-param">oper</em>, <em class="sig-param">control={}</em>, <em class="sig-param">contIndex=''</em>, <em class="sig-param">value=''</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.Browser.browserExp" title="永久链接至目标">¶</a></dt>
+<dd><p>使用浏览器，操作控件，执行一些操作。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">browserExp</span><span class="p">(</span><span class="s2">&quot;输入&quot;</span><span class="p">,</span> <span class="s2">&quot;#q&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;测试输入&quot;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">browserExp</span><span class="p">(</span><span class="s2">&quot;点击&quot;</span><span class="p">,</span> <span class="s2">&quot;搜索按钮&quot;</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>oper</strong> (<em>str</em>) – 需要执行的操作：[“点击”, “模拟点击”, “获取值”, “获取代码”, “获取属性”, “输入”, “模拟输入”, “上传文件”, “计数”, “右击”, “获取标签”, “获取坐标”, “获取尺寸”, “截图”, “下拉加载”, “是否显示”, “等待加载”]</p></li>
+<li><p><strong>control</strong> (<em>str</em>) – 可以是提前设置好的控件名称，也可以直接是一个css选择器字符串。</p></li>
+<li><p><strong>contIndex（int）</strong> – css选择器选择一组控件时，需要指定操作的控件索引。</p></li>
+<li><p><strong>value（str）</strong> – 一些操作需要传入的参数，如输入。</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>返回是否执行成功，或者执行后获取的值。</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>bool, str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="browser.Browser.calcXY">
+<code class="sig-name descname">calcXY</code><span class="sig-paren">(</span><em class="sig-param">element</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.Browser.calcXY" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="browser.Browser.capture">
+<code class="sig-name descname">capture</code><span class="sig-paren">(</span><em class="sig-param">path=''</em>, <em class="sig-param">region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.Browser.capture" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="browser.Browser.click">
+<code class="sig-name descname">click</code><span class="sig-paren">(</span><em class="sig-param">element</em>, <em class="sig-param">btn=0</em>, <em class="sig-param">simulation=False</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.Browser.click" title="永久链接至目标">¶</a></dt>
+<dd><p>点击当前页面的一个控件。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>element</strong> (<em>str</em>) – 控件的css选择器。</p></li>
+<li><p><strong>btn</strong> (<em>int</em>) – 点击的鼠标按键：左键 = 0, 右键 = 1, 中键 = 2</p></li>
+<li><p><strong>simulation（bool）</strong> – 是否模拟点击。</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>返回是否执行成功。</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="browser.Browser.closeEvent">
+<code class="sig-name descname">closeEvent</code><span class="sig-paren">(</span><em class="sig-param">event</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.Browser.closeEvent" title="永久链接至目标">¶</a></dt>
+<dd><p>Close Window</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="browser.Browser.createConnection">
+<code class="sig-name descname">createConnection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#browser.Browser.createConnection" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="browser.Browser.createLayout">
+<code class="sig-name descname">createLayout</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#browser.Browser.createLayout" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="browser.Browser.dict2url">
+<code class="sig-name descname">dict2url</code><span class="sig-paren">(</span><em class="sig-param">dict</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.Browser.dict2url" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="browser.Browser.downLoad">
+<code class="sig-name descname">downLoad</code><span class="sig-paren">(</span><em class="sig-param">timeOut=0.2</em>, <em class="sig-param">element=''</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.Browser.downLoad" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="browser.Browser.evaluateJS">
+<code class="sig-name descname">evaluateJS</code><span class="sig-paren">(</span><em class="sig-param">js</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.Browser.evaluateJS" title="永久链接至目标">¶</a></dt>
+<dd><p>在浏览器的当前页面运行js代码</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>js</strong> (<em>str</em>) – 需要运行的js代码。</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>返回是否执行成功, 或者其他值</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>bool, str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="browser.Browser.eventFilter">
+<code class="sig-name descname">eventFilter</code><span class="sig-paren">(</span><em class="sig-param">source</em>, <em class="sig-param">event</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.Browser.eventFilter" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="browser.Browser.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">url</em>, <em class="sig-param">headerDict={}</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.Browser.get" title="永久链接至目标">¶</a></dt>
+<dd><p>使用浏览器当前页面发起get请求</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>url</strong> (<em>str</em>) – 请求地址</p></li>
+<li><p><strong>headerDict</strong> (<em>dict</em>) – 需要自定义的浏览器请求头参数</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>执行后获取的值</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="browser.Browser.getElement">
+<code class="sig-name descname">getElement</code><span class="sig-paren">(</span><em class="sig-param">control</em>, <em class="sig-param">contIndex=0</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.Browser.getElement" title="永久链接至目标">¶</a></dt>
+<dd><p>选择浏览器的控件，默认按照 CSS选择器 传入控件路径
+新增功能：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>&amp;&amp; 适用于控件在部分DOM中没有的情况，自动拆分为多个路径，分多次获取最终路径。</p></li>
+<li><p>:nth-child(0) 增加子元素选择器参数为0的选项，这样可以选择所有子元素。</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>control</strong> (<em>str</em>) – 控件名称，或者css选择器字符串</p></li>
+<li><p><strong>contIndex</strong> (<em>int</em>) – 需要操作的控件索引编号</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>返回控件的一些参数，如：”offsetTop”，”offsetLeft”，”scrollTop”，”scrollLeft”</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="browser.Browser.input">
+<code class="sig-name descname">input</code><span class="sig-paren">(</span><em class="sig-param">element</em>, <em class="sig-param">value</em>, <em class="sig-param">simulation=False</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.Browser.input" title="永久链接至目标">¶</a></dt>
+<dd><p>向当前页面的一个控件输入内容，需要控件可以接受。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>element</strong> (<em>str</em>) – 控件的css选择器。</p></li>
+<li><p><strong>value</strong> (<em>str</em>) – 要输入的文本或者数值</p></li>
+<li><p><strong>simulation（bool）</strong> – 是否模拟点击。</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>返回是否执行成功。</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="browser.Browser.mitmFunc">
+<code class="sig-name descname">mitmFunc</code><span class="sig-paren">(</span><em class="sig-param">conf</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.Browser.mitmFunc" title="永久链接至目标">¶</a></dt>
+<dd><p>开始浏览器网络代理，需要通过参数传入监听类。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>conf</strong> (<em>dict</em>) – 需要执行的操作：{“listening”:listening(), “termlog”:True, “dumper”:True},</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>返回是否执行成功</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="browser.Browser.newQWebView">
+<code class="sig-name descname">newQWebView</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#browser.Browser.newQWebView" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="browser.Browser.openLink">
+<code class="sig-name descname">openLink</code><span class="sig-paren">(</span><em class="sig-param">url</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.Browser.openLink" title="永久链接至目标">¶</a></dt>
+<dd><p>打开新的链接</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>url</strong> (<em>str</em>) – 打开新的链接的地址</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="browser.Browser.post">
+<code class="sig-name descname">post</code><span class="sig-paren">(</span><em class="sig-param">url</em>, <em class="sig-param">dataDict={}</em>, <em class="sig-param">headerDict={}</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.Browser.post" title="永久链接至目标">¶</a></dt>
+<dd><p>使用浏览器当前页面发起post请求</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>url</strong> (<em>str</em>) – 请求地址</p></li>
+<li><p><strong>dataDict</strong> (<em>dict</em>) – 请求参数</p></li>
+<li><p><strong>headerDict</strong> (<em>dict</em>) – 需要自定义的浏览器请求头参数</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>执行后获取的值</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="browser.Browser.sleep">
+<code class="sig-name descname">sleep</code><span class="sig-paren">(</span><em class="sig-param">timeOut=0.001</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.Browser.sleep" title="永久链接至目标">¶</a></dt>
+<dd><p>延时等待，并不阻塞线程</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>timeOut</strong> (<em>float</em>) – 延时的时间，单位是秒</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="browser.Browser.staticMetaObject">
+<code class="sig-name descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#browser.Browser.staticMetaObject" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="browser.Browser.toPDF">
+<code class="sig-name descname">toPDF</code><span class="sig-paren">(</span><em class="sig-param">path=''</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.Browser.toPDF" title="永久链接至目标">¶</a></dt>
+<dd><p>将当前页面保存为一个PDF。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – 要保存的路径。</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="browser.Browser.urlChanged">
+<code class="sig-name descname">urlChanged</code><span class="sig-paren">(</span><em class="sig-param">url</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.Browser.urlChanged" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="browser.MitmThread">
+<em class="property">class </em><code class="sig-prename descclassname">browser.</code><code class="sig-name descname">MitmThread</code><span class="sig-paren">(</span><em class="sig-param">fun</em>, <em class="sig-param">value={}</em>, <em class="sig-param">parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.MitmThread" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtCore.QThread</span></code></p>
+<dl class="attribute">
+<dt id="browser.MitmThread.finishSignal">
+<code class="sig-name descname">finishSignal</code><em class="property"> = &lt;PySide2.QtCore.Signal object&gt;</em><a class="headerlink" href="#browser.MitmThread.finishSignal" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="browser.MitmThread.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#browser.MitmThread.run" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="browser.MitmThread.staticMetaObject">
+<code class="sig-name descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#browser.MitmThread.staticMetaObject" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="browser.QWebView">
+<em class="property">class </em><code class="sig-prename descclassname">browser.</code><code class="sig-name descname">QWebView</code><span class="sig-paren">(</span><em class="sig-param">newQWebView</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.QWebView" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWebEngineWidgets.QWebEngineView</span></code></p>
+<dl class="method">
+<dt id="browser.QWebView.createContextMenu">
+<code class="sig-name descname">createContextMenu</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#browser.QWebView.createContextMenu" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="browser.QWebView.createWindow">
+<code class="sig-name descname">createWindow</code><span class="sig-paren">(</span><em class="sig-param">windowType</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.QWebView.createWindow" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="browser.QWebView.inspectedPage">
+<code class="sig-name descname">inspectedPage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#browser.QWebView.inspectedPage" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="browser.QWebView.showContextMenu">
+<code class="sig-name descname">showContextMenu</code><span class="sig-paren">(</span><em class="sig-param">pos</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.QWebView.showContextMenu" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="browser.QWebView.staticMetaObject">
+<code class="sig-name descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#browser.QWebView.staticMetaObject" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="browser.WebPage">
+<em class="property">class </em><code class="sig-prename descclassname">browser.</code><code class="sig-name descname">WebPage</code><span class="sig-paren">(</span><em class="sig-param">browser</em>, <em class="sig-param">log</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.WebPage" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWebEngineWidgets.QWebEnginePage</span></code></p>
+<dl class="method">
+<dt id="browser.WebPage.chooseFiles">
+<code class="sig-name descname">chooseFiles</code><span class="sig-paren">(</span><em class="sig-param">mode=0</em>, <em class="sig-param">filename=None</em>, <em class="sig-param">acceptedMimeTypes=''</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.WebPage.chooseFiles" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="browser.WebPage.enabled_changed">
+<code class="sig-name descname">enabled_changed</code><em class="property"> = &lt;PySide2.QtCore.Signal object&gt;</em><a class="headerlink" href="#browser.WebPage.enabled_changed" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="browser.WebPage.insertJs">
+<code class="sig-name descname">insertJs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#browser.WebPage.insertJs" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="browser.WebPage.javaScriptAlert">
+<code class="sig-name descname">javaScriptAlert</code><span class="sig-paren">(</span><em class="sig-param">securityOrigin</em>, <em class="sig-param">msg</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.WebPage.javaScriptAlert" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="browser.WebPage.javaScriptConfirm">
+<code class="sig-name descname">javaScriptConfirm</code><span class="sig-paren">(</span><em class="sig-param">securityOrigin</em>, <em class="sig-param">msg</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.WebPage.javaScriptConfirm" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="browser.WebPage.javaScriptConsoleMessage">
+<code class="sig-name descname">javaScriptConsoleMessage</code><span class="sig-paren">(</span><em class="sig-param">level</em>, <em class="sig-param">message</em>, <em class="sig-param">line</em>, <em class="sig-param">source</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.WebPage.javaScriptConsoleMessage" title="永久链接至目标">¶</a></dt>
+<dd><p>Prints client console message in current output stream.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="browser.WebPage.jsFinished">
+<code class="sig-name descname">jsFinished</code><em class="property"> = &lt;PySide2.QtCore.Signal object&gt;</em><a class="headerlink" href="#browser.WebPage.jsFinished" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="browser.WebPage.jsReturn">
+<code class="sig-name descname">jsReturn</code><span class="sig-paren">(</span><em class="sig-param">result</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.WebPage.jsReturn" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="browser.WebPage.staticMetaObject">
+<code class="sig-name descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#browser.WebPage.staticMetaObject" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="browser.WebPage.syncRunJavaScript">
+<code class="sig-name descname">syncRunJavaScript</code><span class="sig-paren">(</span><em class="sig-param">js</em>, <em class="sig-param">timeOut=10</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.WebPage.syncRunJavaScript" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="browser.listening">
+<em class="property">class </em><code class="sig-prename descclassname">browser.</code><code class="sig-name descname">listening</code><a class="headerlink" href="#browser.listening" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="browser.listening.response">
+<code class="sig-name descname">response</code><span class="sig-paren">(</span><em class="sig-param">flow</em><span class="sig-paren">)</span><a class="headerlink" href="#browser.listening.response" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="table.html" class="btn btn-neutral float-right" title="3. table module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="RPA.html" class="btn btn-neutral float-left" title="1. RPA module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, kinrt
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
